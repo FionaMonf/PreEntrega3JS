@@ -1,0 +1,83 @@
+body {
+  background-color: rgb(0, 121, 228) !important;
+  background-position: center;
+  background-size: cover;
+}
+.logoDiv {
+  display: grid;
+  justify-content: center;
+}
+
+.logoImg {
+  height: 130px;
+  margin-bottom: 20px;
+}
+
+.navBar1 {
+  display: grid;
+  justify-content: center;
+  background-color: rgb(119, 119, 197);
+  background-size: 10px;
+  margin-bottom: 100px;
+
+
+}
+
+.calculaAreas {
+  height: 100px;
+}
+
+.calculadoraImg {
+  height: 100px;
+}
+
+h1 {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+ul {
+  list-style: none;
+}
+
+.todo {
+  display: grid;
+  grid-template-areas: "a a b b";
+  align-items: center;
+  justify-content: space-around;
+}
+
+.figuras {
+  grid-area: "a";
+}
+
+.ul {
+  grid-area: "b";
+  margin-top: 100px;
+  text-align: center;
+}
+.triangulo {
+  height: 100px;
+}
+
+.cuadrado {
+  height: 150px;
+}
+
+.circulo {
+  height: 100px;
+}
+
+.divS {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.botonAS {
+  display: grid;
+  justify-content: center;
+}
