@@ -1,6 +1,13 @@
-const figuras = [];
+let figuras = [];
 
-localStorage.setItem("misFiguras", JSON.stringify(figuras));
+if (JSON.parse(localStorage.getItem(misFiguras)));
+{
+  figuras = JSON.parse(localStorage.getItem(misFiguras));
+}
+
+const guardarResultados = (e) => {
+  localStorage.setItem("misFiguras", JSON.stringify(figuras));
+};
 
 class Triangulo {
   constructor(base, altura) {
@@ -97,7 +104,7 @@ const mostrarResultados = (figuras) => {
 
 const sumarAreas = (e) => {
   const div = document.getElementById("resultadoAreas");
-  var areaTotal = 0;
+  let areaTotal = 0;
   for (const figura of figuras) {
     areaTotal = areaTotal + figura.area;
   }
