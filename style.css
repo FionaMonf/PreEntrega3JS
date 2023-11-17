@@ -75,6 +75,10 @@ ul {
   padding: 15px;
 }
 
+.rectangulo {
+  height: 100px;
+}
+
 .divS {
   display: inline-block;
   padding: 100px;
@@ -194,6 +198,7 @@ h3 {
 }
 
 .igual {
+  margin-left: 11rem;
   font-size: 20px;
   background-color: #e9ff70;
 }
