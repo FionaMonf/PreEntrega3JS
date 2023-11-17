@@ -1,14 +1,5 @@
 let figuras = [];
 
-if (JSON.parse(localStorage.getItem(misFiguras)));
-{
-  figuras = JSON.parse(localStorage.getItem(misFiguras));
-}
-
-const guardarResultados = (e) => {
-  localStorage.setItem("misFiguras", JSON.stringify(figuras));
-};
-
 class Triangulo {
   constructor(base, altura) {
     this.nombre = "Triangulo";
@@ -88,7 +79,6 @@ const crearRectangulo = (e) => {
   figuras.push(nuevoRectangulo);
   mostrarResultados(figuras);
 };
-
 const mostrarResultados = (figuras) => {
   const ul = document.getElementById("resultados");
   //   remuevo todos los li del ul
@@ -109,4 +99,15 @@ const sumarAreas = (e) => {
     areaTotal = areaTotal + figura.area;
   }
   div.innerText = areaTotal;
+};
+
+// let misFiguras;
+if (localStorage.getItem("misFiguras"));
+{
+  figuras = JSON.parse(localStorage.getItem("misFiguras"));
+  mostrarResultados(figuras);
+}
+
+const guardarResultados = (e) => {
+  localStorage.setItem("misFiguras", JSON.stringify(figuras));
 };
