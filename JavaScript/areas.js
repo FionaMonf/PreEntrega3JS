@@ -1,5 +1,3 @@
-let figuras = [];
-
 class Triangulo {
   constructor(base, altura) {
     this.nombre = "Triangulo";
@@ -7,6 +5,7 @@ class Triangulo {
     this.base = base;
     this.altura = altura;
     this.area = (this.base * this.altura) / 2;
+    this.descripcion = this.describir();
   }
   describir() {
     return `El ${this.nombre} de base ${this.base} y altura ${this.altura}, tiene un area de ${this.area} y se calcula asi: ${this.descripcionDelCalculo}`;
@@ -19,6 +18,7 @@ class Cuadrado {
     this.descripcionDelCalculo = "Lado x Lado";
     this.lado = lado;
     this.area = Math.pow(this.lado, 2);
+    this.descripcion = this.describir();
   }
   describir() {
     return `El ${this.nombre} de lado ${this.lado}, tiene un area de ${this.area} y se calcula asi: ${this.descripcionDelCalculo}`;
@@ -31,6 +31,7 @@ class Circulo {
     this.descripcionDelCalculo = "π r²";
     this.radio = radio;
     this.area = Math.PI * Math.pow(this.radio, 2);
+    this.descripcion = this.describir();
   }
   describir() {
     return `El ${this.nombre} de radio ${this.radio}, tiene un area de ${this.area} y se calcula asi: ${this.descripcionDelCalculo}`;
@@ -44,6 +45,7 @@ class Rectangulo {
     this.base = base;
     this.altura = altura;
     this.area = this.base * this.altura;
+    this.descripcion = this.describir();
   }
   describir() {
     return `El ${this.nombre} de base ${this.base} y altura ${this.altura}, tiene un area de ${this.area} y se calcula asi: ${this.descripcionDelCalculo}`;
@@ -87,7 +89,7 @@ const mostrarResultados = (figuras) => {
   //   Agrego un li por cada resultado
   for (const figura of figuras) {
     const nuevoLi = document.createElement("li");
-    nuevoLi.innerText = figura.describir();
+    nuevoLi.innerText = figura.descripcion;
     ul.appendChild(nuevoLi);
   }
 };
@@ -101,13 +103,15 @@ const sumarAreas = (e) => {
   div.innerText = areaTotal;
 };
 
-// let misFiguras;
-if (localStorage.getItem("misFiguras"));
-{
-  figuras = JSON.parse(localStorage.getItem("misFiguras"));
+const guardarResultados = (e) => {
+  localStorage.setItem(MIS_FIGURAS, JSON.stringify(figuras));
+};
+
+let figuras = [];
+
+const MIS_FIGURAS = "misFiuras";
+
+if (localStorage.getItem(MIS_FIGURAS)) {
+  figuras = JSON.parse(localStorage.getItem(MIS_FIGURAS));
   mostrarResultados(figuras);
 }
-
-const guardarResultados = (e) => {
-  localStorage.setItem("misFiguras", JSON.stringify(figuras));
-};

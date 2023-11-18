@@ -11,7 +11,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <script src="../JavaScript/index.js"></script>
+    <script defer src="../JavaScript/areas.js"></script>
   </head>
   <header>
     <div class="logoDiv">
@@ -74,8 +74,11 @@
             alt="circulo"
             class="circulo"
           />
-          <p>Radio <input type="number" id="radio" /></p>
-          <button onclick="crearCirculo()">Calcular</button>
+          <div class="imputCirculo">
+            <p>Radio <input type="number" id="radio" /></p>
+          </div>
+            <button onclick="crearCirculo()">Calcular</button>
+          
         </div>
         <div>
           <img
@@ -88,20 +91,22 @@
           <button onclick="crearRectangulo()">Calcular</button>
         </div>
       </div>
+
       <div class="ul">
         <ul id="resultados"></ul>
       </div>
     </div>
+
     <div class="botonGuardar">
       <button onclick="guardarResultados()">¿Guardar?</button>
     </div>
     <div class="oreos">
-    <h3>¿Queres sumar todas las areas?</h3>
-    <div class="botonAS">
-      <button onclick="sumarAreas()">Click aqui</button>
+      <h3>¿Queres sumar todas las areas?</h3>
+      <div class="botonAS">
+        <button onclick="sumarAreas()">Click aqui</button>
+      </div>
+      <div class="divS" id="resultadoAreas"></div>
     </div>
-    <div class="divS" id="resultadoAreas"></div>
-  </div>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
