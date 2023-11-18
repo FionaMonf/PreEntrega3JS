@@ -31,12 +31,15 @@ body {
   margin-left: 30rem;
 }
 
-h1 {
+.titulos {
   font-family: Georgia, Times, Times New Roman, serif;
-
   display: grid;
   justify-content: center;
   padding-bottom: 40px;
+}
+
+.titulito {
+  font-family: Georgia, Times, Times New Roman, serif;
 }
 
 ul {
@@ -128,16 +131,18 @@ h3 {
   height: 2rem;
 }
 
-button {
+.botoncitos {
   border-radius: 5px !important;
   border-width: 2px;
+  border-color: #f72b79;
   font-weight: bold;
   font-size: 15px;
   background-color: #ff70a6 !important;
+  color: aliceblue
 }
 
-button:hover {
-  color: aliceblue;
+.botoncitos:hover {
+  color:#e50159
 }
 
 /* calculadora */

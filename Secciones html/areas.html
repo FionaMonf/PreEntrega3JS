@@ -46,7 +46,7 @@
     </nav>
   </header>
   <body>
-    <h1>Cálculo de areas</h1>
+    <h1 class="titulos">Cálculo de areas</h1>
     <div>
       <div class="todo">
         <div>
@@ -57,7 +57,7 @@
           />
           <p>Base <input type="number" id="baseT" /></p>
           <p>Altura <input type="number" id="alturaT" /></p>
-          <button onclick="crearTriangulo()">Calcular</button>
+          <button onclick="crearTriangulo()" class="botoncitos">Calcular</button>
         </div>
         <div>
           <img
@@ -66,7 +66,7 @@
             class="cuadrado"
           />
           <p>Lado <input type="number" id="lado" /></p>
-          <button onclick="crearCuadrado()">Calcular</button>
+          <button onclick="crearCuadrado()" class="botoncitos">Calcular</button>
         </div>
         <div>
           <img
@@ -77,7 +77,7 @@
           <div class="imputCirculo">
             <p>Radio <input type="number" id="radio" /></p>
           </div>
-            <button onclick="crearCirculo()">Calcular</button>
+            <button onclick="crearCirculo()" class="botoncitos">Calcular</button>
           
         </div>
         <div>
@@ -88,7 +88,7 @@
           />
           <p>Base <input type="number" id="baseR" /></p>
           <p>Altura <input type="number" id="alturaR" /></p>
-          <button onclick="crearRectangulo()">Calcular</button>
+          <button onclick="crearRectangulo()" class="botoncitos">Calcular</button>
         </div>
       </div>
 
@@ -98,12 +98,12 @@
     </div>
 
     <div class="botonGuardar">
-      <button onclick="guardarResultados()">¿Guardar?</button>
+      <button onclick="guardarResultados()" class="botoncitos">¿Guardar?</button>
     </div>
     <div class="oreos">
-      <h3>¿Queres sumar todas las areas?</h3>
+      <h3 class="titulito">¿Queres sumar todas las areas?</h3>
       <div class="botonAS">
-        <button onclick="sumarAreas()">Click aqui</button>
+        <button onclick="sumarAreas()" class="botoncitos">Click aqui</button>
       </div>
       <div class="divS" id="resultadoAreas"></div>
     </div>
