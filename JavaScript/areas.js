@@ -105,6 +105,10 @@ const sumarAreas = (e) => {
 
 const guardarResultados = (e) => {
   localStorage.setItem(MIS_FIGURAS, JSON.stringify(figuras));
+  Swal.fire({
+    title: "Guardado con exito!",
+    icon: "success" 
+  });
 };
 
 let figuras = [];
